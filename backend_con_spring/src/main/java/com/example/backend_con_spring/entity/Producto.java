@@ -2,7 +2,7 @@ package com.example.backend_con_spring.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
+@Data
 @Entity
 @Table(name = "producto")
 public class Producto {
@@ -10,6 +10,9 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private Long id;
+
+    public Producto() {
+    }
 
     @Column(name="nombre")
     private String nombre;

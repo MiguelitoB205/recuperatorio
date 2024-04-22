@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -14,8 +15,8 @@ public class ProductoService {
     @Autowired
     IProductoRepository productoRepository;
 
-    public ArrayList<Producto> getProductos(){
-        return (ArrayList<Producto>) productoRepository.findAll();
+    public List<Producto> getProductos(){
+        return (List<Producto>) productoRepository.findAll();
     }
 
     public Producto saveProducto(Producto producto){

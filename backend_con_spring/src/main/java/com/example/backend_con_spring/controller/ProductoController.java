@@ -7,10 +7,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/producto")
+
 public class ProductoController {
 
     @Autowired
@@ -18,8 +20,8 @@ public class ProductoController {
     private ProductoService productoService;
 
     @GetMapping
-    public ArrayList<Producto> getProductos(){
-        return this.productoService.getProductos();
+    public List<Producto> getProductos(){
+        return productoService.getProductos();
     }
 
     @PostMapping
